@@ -22,16 +22,16 @@
 
 
             .map{position: absolute;
-                top: 140px;
+                top: 200px;
                 left: 80px;}
 
               .select1{position:absolute;
-                top:260px;
+                top:295px;
                 right:640px;
                 }
 
                 .leaving_from{position:absolute;
-                top:230px;
+                top:265px;
                 right:740px;}
                
                 .select2{position:absolute;
@@ -39,25 +39,50 @@
                     right:640px}
 
                     .choose{position:absolute;
-                        top:374px;
-                        right:840px}
+                        top:370px;
+                        right:690px;}
 
                         .btn{position:absolute;
-                            top:500px;
-                            right:450px}
+                            top:600px;
+                            right:800px}
     
                 .box{border:solid;
                                 position:absolute;
-                            top:220px;
-                            right:20px}
-
-				
-                            .result{position:absolute;
-                            top:310px;
-                            right:70px; }
+                            top:225px;
+                            right:300px}
             
-   
-     
+               .pic {position: absolute;
+                top: 345px;
+                 right: 409px ;
+               }
+
+               .skibidi {position: absolute;
+                top: 555px;
+                 right: 300px ;
+               }
+
+            .toilet{position: absolute;
+                top: 600px;
+                 right: 670px ;
+               }
+            
+
+
+              .select3 {position: absolute;
+                top: 490px;
+                 right: 640px ;
+               }
+
+              .going {position:absolute;
+                        top:450px;
+                        right:820px;}
+
+
+              .banner{position:absolute;
+                        top:310px;
+                        right:40px;}
+
+
 </style>
 </head>
 <body>
@@ -83,7 +108,7 @@
 	
 <body>
     <div style="background-color: black">
-    <h1 style="text-align:center; color:orange;" class="fair guide">Fare Guide</h1>
+    <h1 style="text-align:center; color:orange;">Fare Guide</h1>
     </div> 
     
 <div class="map">
@@ -96,12 +121,12 @@
 <h3 style="color: white; background-color: black;" class="leaving_from">LEAVING FROM: </h3>
              
               <select class="select1" id="leave" style="width: 20%"> 
-                  <option value="none"> Select </option>
-                  <option value="1000">DARWEN </option>
-                  <option  value="1200">LIVERPOOL </option>
-                  <option  value="4000">MANCHESTER </option>
-                  <option  value="5000">RAMSBOTTOM </option>
-                  <option  value="2000">COLNEY </option>
+                  <option value="0"> Select </option>
+                  <option value="100">DARWEN </option>
+                  <option  value="120">LIVERPOOL </option>
+                  <option  value="400">MANCHESTER </option>
+                  <option  value="500">RAMSBOTTOM </option>
+                  <option  value="200">COLNEY </option>
 
                   <br>
 
@@ -109,22 +134,43 @@
 
             </select>
 </div>
+
+<div class="container" style="background-color: white;">
+    <h3 style="color: white; background-color: black;" class="going">GOING TO </h3>
+
+              <select class="select3" id="place" style="width: 20%"> 
+                  <option value="0"> Select </option>
+                  <option value="">BOLTON </option>
+                  <option  value="">BACUP </option>
+                  <option  value="">BURY</option>
+                   <option  value="">PRESTON </option>
+                  <option  value="">DARWEN</option>
+                 
+                  <br>
+
+            </select>
+</div>
+
             <div class="#">
-            <label style="color:white;background-color:black;" class="choose">DISCOUNT:</label>
+            <h3 style="color:white;background-color:black;" class="choose">CHOOSE DISCOUNT:</h3>
             <select class="select2" id="discount" style="width: 20%"> 
                       
-                <option value="none"> Select </option>
-               <option value="0.4">BOLTON</option>
-               <option  value="0.7">BACUP </option>
-               <option  value="0">BURY </option>
-               <option  value="0">PRESTON </option>
-               <option  value="4.1">DARWEN </option>
-
+                <option value="0"> Select </option>
+               <option value="0.4">PWD/ELDERLY</option>
+               <option  value="0.2">STUDENT</option>
+              
          </select>
              </div> 
              <button type="button" class="btn btn-danger" onclick="check_price()"> Ticket Price </button>
+
+
+ 
+     
+
       
-       
+       <div class="container" style="color: black;">    
+           <div class="float-end">
+             
 </div>
 </div>
          </form>
@@ -137,14 +183,32 @@
                      
 
                 }
+
+ function check_print() {
+               
+                  
+                   window.alert ('Your ticket is printing.')
+
+      }
+
+
+
              </script>
-                      <img src="white box.png" alt="white box" class="box" width="250px">
-	
-	<div class="container" style="color: black;">    
-           <div class="float-end">
-             <h1 id="result" style="color: black; background-color: white" class="result"></h1>
 
 
-                </div> 
+                      <img src="white box.png" alt="white box" class="box" width="300px" id="white">
+
+                  <img src="ticket2.png" class="skibidi" width="300px">
+                </div>
+
+                  <h1 id="result" style="color: black; background-color: white" class="pic">PRICE</h1>
+
+                  <button type="button" class="toilet btn btn-danger" onclick="check_print()"> Print Ticket </button>
+
+<img src="trainbanner.png" class="banner" width="250px">
+
+
+
+
 </body>
 </html>
