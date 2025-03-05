@@ -85,9 +85,10 @@
     <img src="train map 1.png" alt="train map" width="500px">
 </div>
 
-
-    <div class="#">
+<form>
+    <div class="container" style="background-color: white;">
 <label style="color: white; background-color: black;" class="leaving_from">LEAVING FROM: </label>
+             
               <select class="select1" id="leave" style="width: 20%"> 
                   <option value="none"> Select </option>
                   <option value="1000">DARWEN </option>
@@ -98,12 +99,10 @@
 
                   <br>
 
-		      
-
-             
+            
 
             </select>
-
+</div>
             <div class="#">
             <label style="color:white;background-color:black;" class="choose">DISCOUNT:</label>
             <select class="select2" id="discount" style="width: 20%"> 
@@ -118,23 +117,26 @@
          </select>
              </div> 
              <button type="button" class="btn btn-danger" onclick="check_price()"> Ticket Price </button>
-
+      
+       <div class="container" style="color: black;">    
+           <div class="float-end">
+             <h1 id="result" style="color: black; background-color: white"></h1>
+</div>
+</div>
+         </form>
              <script>
                 function check_price(){
                     var leave1=document.getElementById('leave').value;
                     var discount1=document.getElementById('discount').value;
                     var final_price= leave1 - (discount1*leave1);
-                    window.alert('Your total is:  ' + final_price);
+                    document.getElementById('result').innerHTML ='PHP  ' + final_price;
                      
 
                 }
              </script>
-
-	    <img src="white box.png" alt="white box" class="box" width="250px">
-                  
-
-                </div>
+                      <img src="white box.png" alt="white box" class="box" width="250px">
 
 
+                </div> 
 </body>
 </html>
